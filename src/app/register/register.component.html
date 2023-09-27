@@ -1,0 +1,41 @@
+<mat-card class="heading">
+    <mat-card-title>SIGN UP</mat-card-title>
+  </mat-card>
+  
+  <section class="block">
+    <div class="reg">
+      <form (ngSubmit)="onSubmit()" class="register-block">
+        <mat-form-field class="form-group">
+          <mat-label>Full Name</mat-label>
+          <input matInput type="text" [(ngModel)]="users.fullname" name="firstName" required>
+        </mat-form-field>
+  
+        <mat-form-field class="form-group">
+          <mat-label>Email Id</mat-label>
+          <input matInput type="email" [(ngModel)]="users.email" name="emailId" required>
+        </mat-form-field>
+  
+        <mat-form-field class="form-group">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput type="number" [(ngModel)]="users.mobileno" name="mobile" required>
+        </mat-form-field>
+  
+        <mat-form-field class="form-group">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" [(ngModel)]="users.password" name="password" required>
+        </mat-form-field>
+  
+        <mat-form-field class="form-group">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password" [(ngModel)]="users.confirmpassword" name="Confirm" required>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+  
+        <div class="spacer"></div>
+  
+        <a mat-button color="primary" [routerLink]="['/login']">Already have an account? Login!</a>
+      </form>
+    </div>
+  </section>
+  
